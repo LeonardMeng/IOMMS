@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kanadem.controlcabin.Dao.ServerDao">
+  <select id="getServerInfo" resultType="com.kanadem.controlcabin.Entity.ServerEntity">
+        SELECT GUID, NAME, IP, PROCESSOR, SYSTEM_TYPE, SYSTEM_VERSION, WORK_GROUP,
+               IS_ACTIVE, REMARK, CREATE_DATE, STATUS, IP_LINK, COLLECT_TYPE,
+               EXECUTE_MODEL, IP_INTERNAL_NETWORK, IP_VIRTUAL, SERVER_TYPE, SERVER_ID,
+               SERVER_REGION, ENABLE, SERVER_MODEL FROM BASE_SERVER_INFO
+   </select>
+</mapper>

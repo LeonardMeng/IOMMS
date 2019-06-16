@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src = "js/echarts1.min.js"></script>
+    <script src="data/map/js/province/gansu.js"></script>
+    <script src="data/map/js/gan1_su4_lan2_zhou1.js"></script>
+    <script type="text/javascript" src = "js/extra/echarts-gl1.min.js"></script>
+</head>
+<body id="main" style="width: 500px;height: 500px;">
+<script>
+    let left_top_Chart = echarts.init(document.getElementById('main'));
+    // 指定图表的配置项和数据
+
+    //option参数是重点。
+    option = {
+        // tooltip : {
+        //     trigger: 'item'
+        // },
+        backgroundColor:'rgba(128, 128, 128, 0.1)',
+        geo: {
+            show: true,
+            width: '90%',
+            map: '兰州',
+            label: {
+                normal: {
+                    show: false,
+                    textStyle: {
+                        color: 'none',
+                    }
+                },
+                emphasis: {
+                    show: false,
+                    textStyle: {
+                        color: 'none',
+                    }
+                }
+            },
+            roam: false,
+            itemStyle: {
+                normal: {
+                    borderColor: '#00fff6',
+                    borderWidth: 1,
+                    shadowColor: 'rgba(0, 255, 246, 0.6)',
+                    shadowOffsetX: 0,
+                    shadowOffsetY: 0,
+                    shadowBlur: 120
+                },
+                emphasis: {
+                }
+            }
+        },
+        series: [
+            // 地图阴影
+            {
+                type: 'map',
+                map: '兰州',
+                width: '90%',
+                geoIndex: 1,
+                aspectScale: 0.75, //长宽比
+                showLegendSymbol: false, // 存在legend时显示
+                label: {
+                    normal: {
+                        show: false,
+                    },
+                    emphasis: {
+                        show: false,
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    }
+                },
+                roam: false,
+                itemStyle: {
+                    normal: {
+                        borderColor: '#00fff6',
+                        borderWidth: 1
+                    },
+                    emphasis: {
+                    }
+                },
+            }
+        ]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    left_top_Chart.setOption(option);
+</script>
+</body>
+</html>

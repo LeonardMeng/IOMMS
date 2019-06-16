@@ -1,0 +1,10 @@
+server:
+  port: 8001
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@127.0.0.1:1521:prod
+    username: IOMMS
+    password: IOMMS
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+mybatis:
+  mapper-locations: classpath:mapper/*.xml

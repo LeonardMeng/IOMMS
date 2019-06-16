@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <script type="text/javascript" src = "js/extra/jquery-3.4.0.min.js"></script>
+</head>
+<body>
+<div id="main" style="width: 300px;height:300px;"></div>
+<script>
+
+    $.getJSON("http://localhost:2532/mpi/server/list?province_id=JIL", "", function (data) {
+        console.log(data);
+    });
+</script>
+
+
+</body>
+</html>
