@@ -24,3 +24,6 @@ hs_err_pid*
 
 # idea project files
 *.idea
+
+# Vue Files
+./IOMMS-VueWeb/controlcabin/node_modules/
