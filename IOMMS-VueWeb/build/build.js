@@ -1,4 +1,6 @@
 'use strict'
+import * as process from '../.eslintrc'
+
 require('./check-versions')()
 
 process.env.NODE_ENV = 'production'

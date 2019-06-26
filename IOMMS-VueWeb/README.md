@@ -1,6 +1,6 @@
-# controlcabin
+# vuedemo
 
-> A Vue.js project
+> vue demo
 
 ## Build Setup
 

@@ -1,0 +1,445 @@
+
+
+
+/*全局样式 */
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Microsoft YaHei';
+}
+
+html,
+body,
+#app,
+.wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /*IE浏览器滚动条样式*/
+  scrollbar-arrow-color: #ffffff;
+  scrollbar-face-color: #d3d0d0;
+  scrollbar-3dlight-color: #d3d0d0;
+  scrollbar-highlight-color: #d3d0d0;
+  scrollbar-shadow-color: #d3d0d0;
+  scrollbar-darkshadow-color: #d3d0d0;
+  scrollbar-track-color: rgba(255, 255, 255, 1);
+  scrollbar-base-color: rgba(255, 255, 255, 1);
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active{
+  transition: all .1s ease;
+}
+
+.fade-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.move-enter-active,
+.move-leave-active {
+  transition: opacity .5s;
+}
+
+.move-enter,
+.move-leave {
+  opacity: 0;
+}
+
+.el-loading-mask {
+  background-color: rgba(245, 246, 247, 0.5) !important;
+}
+
+/*webkit内核浏览器滚动条样式*/
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #d3d0d0;
+}
+
+/*webkit内核浏览器滚动条样式*/
+
+/*ELMENT UI控件样式修改*/
+
+.el-table .cell {
+  text-overflow: ellipsis !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+}
+
+.el-table--border.el-loading-parent--relative {
+  border-left: solid 1px #ebeef5 !important;
+  border-top: solid 1px #ebeef5 !important;
+}
+
+.el-loading-spinner {
+  margin-top: -9px !important;
+}
+
+.el-date-editor--daterange.el-input,
+.el-date-editor--daterange.el-input__inner,
+.el-date-editor--timerange.el-input,
+.el-date-editor--timerange.el-input__inner {
+  width: 259px !important;
+}
+
+.el-date-editor .el-range-separator {
+  width: 15% !important;
+}
+
+.el-card__header {
+  padding: 10px 5px !important;
+}
+
+.el-card__body {
+  padding: 5px !important;
+}
+
+
+.el-dialog__header{
+  padding: 10px 10px 10px 10px !important;
+}
+.el-dialog__body {
+  padding: 0px 5px 5px 5px !important;
+}
+.el-dialog__headerbtn{
+  top:10px !important;
+  right: 10px !important;
+}
+
+/*ELMENT UI控件样式修改*/
+
+/*iconfont多色图标通用样式*/
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+/*iconfont多色图标通用样式*/
+
+/* 全局样式 */
+
+
+/*通过命名空间修改全局样式 操作界面element控件样式修改*/
+
+/*页头head-nav的局部样式*/
+
+.head-custom-dropdown {
+  padding: 0px !important;
+  min-width: 0 !important;
+}
+
+/*页头head-nav的局部样式*/
+
+/*内容页面局部样式*/
+
+.app-container {
+  padding-left: 10px;
+}
+
+
+.app-container .crumbs {
+  margin: 10px 0px 0px 0px;
+  padding: 0px 5px 0px 5px;
+  line-height: 30px;
+  font-size: 14px;
+}
+.app-container .crumbs span {
+  color: grey;
+}
+.app-container .crumbs .left-icon{
+  padding-left: 5px;
+  border-left: 5px solid;
+  border-color: #409EFF;
+}
+.app-container .crumbs .description{
+  padding-left: 10px;
+}
+
+.app-container .container {
+  background: #fff;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.app-container .container .handle-box {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+}
+.app-container .container .handle-box:hover {
+  box-shadow: #efefef 0px 0px 6px 2px;
+}
+.app-container .container .line-button{
+  margin-left:0;
+}
+.app-container .container .handle-box .el-collapse-item__header {
+  height: 38px;
+  line-height: 38px;
+  font-weight: 900;
+  font-size: 14px;
+}
+.app-container .container .handle-box .el-collapse-item__content {
+  padding-bottom: 5px;
+}
+.app-container .container .handle-box .el-collapse-item__arrow {
+  line-height: 38px;
+}
+.app-container .container .handle-box .el-form-item--mini.el-form-item {
+  margin-bottom: 0px;
+}
+.app-container .container .handle-box .el-range-editor--mini.el-input__inner {
+  vertical-align: middle;
+}
+.app-container .container .handle-box .el-radio-button:first-child .el-radio-button__inner {
+  border-radius: 4px!important;
+}
+.app-container .container .handle-box .el-radio-button:last-child .el-radio-button__inner {
+  border-radius: 4px!important;
+}
+.app-container .container .handle-box .el-radio-button .el-radio-button__inner {
+  border-radius: 4px!important;
+  padding: 7px 10px!important;
+}
+.app-container .container .handle-box .el-radio-button__inner {
+  border-left: 1px solid #dcdfe6!important;
+}
+
+.app-container .container .show-box {
+  border-radius: 5px;
+}
+.app-container .container .show-box:hover {
+  box-shadow: #efefef 0px 0px 6px 2px;
+}
+.app-container .container .show-box .table-expand-style label {
+  color: #99a9bf;
+}
+
+.app-container .container .pagination {
+  margin: 20px 0px;
+  text-align: right;
+}
+
+.app-container .container .el-row {
+  margin-bottom: 5px;
+}
+
+.app-container .container .el-card.is-hover-shadow:hover {
+  box-shadow: #efefef 0px 0px 6px 2px;
+}
+
+.message-action-icon {
+  padding: 5px !important;
+  margin-left: 0px !important;
+}
+
+/*内容页面局部样式*/
+
+/*提交表单弹窗局部样式*/
+
+.dialog-form-custom{
+  min-width: 700px;
+}
+
+.base-form-single .el-dialog{
+  min-width: 700px;
+  width: 80% !important;
+  margin-top: 8vh !important;
+}
+
+.base-form-single .el-row {
+  margin-bottom: 10px;
+}
+
+.base-form-single .el-select {
+  display: block;
+}
+
+.base-form-single .el-form-item--mini.el-form-item {
+  margin-bottom: 5px;
+}
+
+.base-form-single .form-button{
+  margin-left:0 !important;
+}
+
+.base-form-double .el-dialog{
+  min-width: 700px;
+  width: 80% !important;
+  margin-top: 8vh !important;
+}
+
+.base-form-double .el-row {
+  margin-bottom: 10px;
+}
+
+.base-form-double .el-select {
+  display: block;
+}
+
+.base-form-double .el-form-item--mini.el-form-item {
+  margin-bottom: 5px;
+}
+
+.base-form-double .form-button{
+  margin-left:0 !important;
+}
+
+.base-form-detail .el-dialog{
+  min-width: 700px;
+  width: 80% !important;
+  margin-top: 8vh !important;
+}
+
+.base-form-detail .el-form-item--mini.el-form-item {
+  margin-bottom: 0px;
+  height: 100%;
+}
+
+.base-form-detail .detail-form .el-form-item__label {
+  background-color: #efefef;
+  height: 100%;
+}
+
+.base-form-detail .detail-form{
+  margin-bottom: 10px;
+}
+
+.base-form-detail .detail-form span{
+  color:grey
+}
+
+.base-form-detail .detail-form .el-row{
+  border-top:1px solid #d4d7dc;
+  border-right: 1px solid  #d4d7dc;
+  display: flex;
+  justify-content: center;
+}
+
+.base-form-detail .detail-form .el-col {
+  border-bottom: 1px solid  #d4d7dc;
+  border-left: 1px solid  #d4d7dc;
+  margin-bottom: -1px;
+}
+
+.base-form-detail .detail-grid .el-row{
+  margin-bottom: 10px;
+}
+
+
+/*提交表单弹窗局部样式*/
+
+/*放大镜局部样式*/
+
+.dialog-magnifier-custom .magnifier-btn-search {
+  float: right;
+  max-width: 40px;
+  border-bottom-left-radius: unset;
+  border-top-left-radius: unset;
+  padding: 7px 15px 6px 15px;
+}
+
+.dialog-magnifier-custom .magnifier-input-search {
+  float: left;
+  width: calc(100% - 40px);
+}
+
+.dialog-magnifier-custom .magnifier-input-search .el-input__inner {
+  border-bottom-right-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.dialog-magnifier-content .el-form-item--mini.el-form-item {
+  margin-bottom: 5px;
+}
+
+.dialog-magnifier-content .el-row {
+  margin-bottom: 10px;
+}
+
+/*放大镜局部样式*/
+
+/*自定义下拉列表的样式*/
+
+.dropdown-menu {
+  left: 0;
+  float: left;
+  width: 100%;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border-radius: 4px;
+}
+
+.dropdown-menu li {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.dropdown-menu li a {
+  cursor: pointer;
+  padding: 3px 20px;
+  min-height: 0;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #409EFF;
+}
+
+.dropdown-menu>li>a {
+  border-radius: 3px;
+  color: inherit;
+  line-height: 25px;
+  margin: 4px;
+  text-align: left;
+  font-weight: 400;
+}
+
+.text-center {
+  text-align: center;
+  padding: 5px;
+}
+
+.text-center a {
+  color: inherit;
+}
+
+.view-title {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/*自定义下拉列表的样式*/
+/*通过命名空间修改全局样式 操作界面element控件样式修改*/
+
+/*自定义菜单样式*/
+.el-menu-item, .el-submenu__title {
+  height: 45px !important;
+  line-height: 45px !important;
+}
+/*自定义菜单样式*/

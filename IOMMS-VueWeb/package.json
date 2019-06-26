@@ -1,7 +1,7 @@
 {
-  "name": "controlcabin",
+  "name": "iommsweb",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "智能运维系统前端",
   "author": "KanadeM",
   "private": true,
   "scripts": {
@@ -11,7 +11,14 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "echarts": "^4.2.1",
+    "element-ui": "^2.9.2",
+    "jquery": "^3.4.1",
+    "underscore": "^1.9.1",
     "vue": "^2.5.2",
+    "vue-axios": "^2.1.4",
+    "vue-echarts": "^4.0.3",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
@@ -28,6 +35,7 @@
     "chalk": "^2.0.1",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^3.0.0",
+    "echarts-gl": "^1.1.1",
     "eslint": "^4.15.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "^3.0.0",

@@ -8,39 +8,9 @@
  * 一级属性中的方法：当前模块需要用的接口
  * @type {Object}
  */
-
-// import system from './system/'
-import database from './database/'
-import disk from './disk/'
-import messagequeue from './messagequeue/'
-import network from './network/'
-import news from './news/'
-import server from './server/'
+import test from './test/'
 export default [{
-  module: 'database',
-  name: '数据库信息',
-  list: database
-}, {
-  module: 'disk',
-  name: '磁盘信息',
-  list: disk
-}, {
-  module: 'messagequeue',
-  name: '消息队列信息',
-  list: messagequeue
-},
-{
-  module: 'network',
-  name: '网络信息',
-  list: network
-},
-{
-  module: 'news',
-  name: '系统最新消息',
-  list: news
-},
-{
-  module: 'server',
-  name: '服务器消息',
-  list: server
+  module: 'test',
+  name: '系统设置',
+  list: test
 }]
