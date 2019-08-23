@@ -19,6 +19,7 @@
   <typeAliases>
 
     <typeAlias alias="ServerControlInfo" type="com.KanadeM.IOMMS.Entity.ServerControlInfo"></typeAlias>
+    <typeAlias alias="Message" type="com.KanadeM.IOMMS.Entity.Message"></typeAlias>
 
   </typeAliases>
 
@@ -51,6 +52,7 @@
   <mappers>
 
     <mapper resource="SqlMapper/ServerControlInfo.xml"/>
+    <mapper resource="SqlMapper/Message.xml"/>
 
   </mappers>
 

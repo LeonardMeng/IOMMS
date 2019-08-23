@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.KanadeM.IOMMS.Dao.MessageDao">
+  <sql id="Message_Column_List">
+      UUID() MESSAGE_ID,
+      B.GUID SERVER_CONTROL_INFO_ID,
+      MSG_TYPE,
+      B.SERVER_ID SERVER_ID,
+      A.SERVER_IP SERVER_IP,
+      A.SYSTEM_TYPE SYSTEM_TYPE,
+      IP_CHAIN
+  </sql>
+  <resultMap id="BaseResultMap" type="com.KanadeM.IOMMS.Entity.Message">
+    <result column="MESSAGE_ID" property="messageID" jdbcType="VARCHAR" />
+    <result column="SERVER_CONTROL_INFO_ID" property="serverControlInfoID" jdbcType="VARCHAR" />
+    <result column="MSG_TYPE" property="msgType" jdbcType="VARCHAR" />
+    <result column="SERVER_ID" property="serverID" jdbcType="VARCHAR" />
+    <result column="SERVER_IP" property="serverIP" jdbcType="VARCHAR" />
+    <result column="SYSTEM_TYPE" property="systemType" jdbcType="VARCHAR" />
+    <result column="IP_CHAIN" property="ipChain" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <select id="getMessageList" parameterType="java.util.Map" resultMap="BaseResultMap" >
+
+    select  <include refid="Message_Column_List" />
+    from BASE_SERVER_INFO A INNER JOIN SERVER_CONTROL_INFO B ON  A.SERVER_ID = B.SERVER_ID
+    WHERE B.ENABLE = '1'
+
+    <!--<where>-->
+
+      <!--<if test="musicId !=null " >-->
+
+        <!--and music_id = #{musicId}-->
+
+      <!--</if>-->
+
+      <!--<if test="musicName != null">-->
+
+        <!--and music_name like '%${musicName}%'-->
+
+      <!--</if>-->
+
+      <!--<if test="musicAuthor != null">-->
+
+        <!--and music_author like '%${musicAuthor}%'-->
+
+      <!--</if>-->
+
+      <!--<if test="musicLanguage != null">-->
+
+        <!--and music_language = #{musicLanguage}-->
+
+      <!--</if>-->
+
+      <!--<if test="musicStyle != null">-->
+
+        <!--and music_style = #{musicStyle}-->
+
+      <!--</if>-->
+
+      <!--<if test="startDate != null">-->
+
+        <!--and create_time >= '${startDate}'-->
+
+      <!--</if>-->
+
+      <!--<if test="endDate != null">-->
+
+        <!--and '${endDate}' >= create_time-->
+
+      <!--</if>-->
+
+    <!--</where>-->
+
+  </select>
+
+</mapper>

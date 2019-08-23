@@ -1,4 +1,6 @@
+import com.KanadeM.IOMMS.Dao.MessageDao;
 import com.KanadeM.IOMMS.Dao.ServerControlInfoDao;
+import com.KanadeM.IOMMS.Entity.Message;
 import com.KanadeM.IOMMS.Entity.ServerControlInfo;
 import java.io.Reader;
 import java.util.List;
@@ -19,6 +21,7 @@ public class ServerControlInfoTest {
   private static SqlSession sqlSession;
 
   private static ServerControlInfoDao serverControlInfoDao;
+  private static MessageDao messageDao;
 
 
   @Before
@@ -34,6 +37,7 @@ public class ServerControlInfoTest {
       sqlSession = ssf.openSession();
 
       serverControlInfoDao = sqlSession.getMapper(ServerControlInfoDao.class);
+      messageDao = sqlSession.getMapper(MessageDao.class);
 
     } catch (Exception e) {
 
@@ -53,7 +57,17 @@ public class ServerControlInfoTest {
     List<ServerControlInfo> serverControlInfoList = serverControlInfoDao.getServerControlInfoList(null);
     for(ServerControlInfo serverControlInfo : serverControlInfoList){
 
-      System.out.println(serverControlInfo.getMsgType());
+      System.out.println(serverControlInfo.toString());
+    }
+
+  }
+
+  @Test
+  public void getMessageList() {
+    List<Message> messageList = messageDao.getMessageList(null);
+    for(Message message : messageList){
+
+      System.out.println(message.toString());
     }
 
   }

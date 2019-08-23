@@ -6,6 +6,8 @@ package com.KanadeM.IOMMS.Entity;
  */
 
 public class Message {
+  private String messageID;
+  private String serverControlInfoID;
   private MSG_TYPE msgType;
   private String serverID;
   private String serverIP;
@@ -86,5 +88,38 @@ public class Message {
 
   public void setDataSplitCol(String dataSplitCol) {
     this.dataSplitCol = dataSplitCol;
+  }
+
+  public String getServerControlInfoID() {
+    return serverControlInfoID;
+  }
+
+  public void setServerControlInfoID(String serverControlInfoID) {
+    this.serverControlInfoID = serverControlInfoID;
+  }
+
+  public String getMessageID() {
+    return messageID;
+  }
+
+  public void setMessageID(String messageID) {
+    this.messageID = messageID;
+  }
+
+  @Override
+  public String toString() {
+    return "Message{" +
+        "messageID='" + messageID + '\'' +
+        ", serverControlInfoID='" + serverControlInfoID + '\'' +
+        ", msgType=" + msgType +
+        ", serverID='" + serverID + '\'' +
+        ", serverIP='" + serverIP + '\'' +
+        ", systemType=" + systemType +
+        ", ipChain='" + ipChain + '\'' +
+        ", dataIndex=" + dataIndex +
+        ", messageInfo='" + messageInfo + '\'' +
+        ", dataSplitRow='" + dataSplitRow + '\'' +
+        ", dataSplitCol='" + dataSplitCol + '\'' +
+        '}';
   }
 }

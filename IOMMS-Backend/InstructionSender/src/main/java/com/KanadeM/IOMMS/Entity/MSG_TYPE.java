@@ -40,5 +40,5 @@ public enum MSG_TYPE {
   /**
    * 内存
    */
-  Y00030
+  M00030
 }

@@ -6,7 +6,7 @@ package com.KanadeM.IOMMS.Entity;
 
 public class ServerControlInfo {
   private String serverID;
-  private String msgType;
+  private MSG_TYPE msgType;
 
   public String getServerID() {
     return serverID;
@@ -16,11 +16,19 @@ public class ServerControlInfo {
     this.serverID = serverID;
   }
 
-  public String getMsgType() {
+  public MSG_TYPE getMsgType() {
     return msgType;
   }
 
-  public void setMsgType(String msgType) {
+  public void setMsgType(MSG_TYPE msgType) {
     this.msgType = msgType;
+  }
+
+  @Override
+  public String toString() {
+    return "ServerControlInfo{" +
+        "serverID='" + serverID + '\'' +
+        ", msgType=" + msgType +
+        '}';
   }
 }
