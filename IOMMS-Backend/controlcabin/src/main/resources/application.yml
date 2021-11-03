@@ -2,7 +2,7 @@ server:
   port: 8001
 spring:
   datasource:
-    url: jdbc:oracle:thin:@127.0.0.1:1521:prod
+    url: jdbc:oracle:thin:@10.211.55.7:1521:orcl
     username: IOMMS
     password: IOMMS
     driver-class-name: oracle.jdbc.driver.OracleDriver

@@ -11,7 +11,7 @@
 /**
  * Created by KanadeM on 2019/6/26.
  */
-import echarts from 'echarts'
+import  echarts from 'echarts'
 import 'echarts-gl'
 export default {
   name: 'HealthPercent',

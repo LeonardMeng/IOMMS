@@ -4,7 +4,8 @@ import com.KanadeM.IOMMS.Entity.Message;
 import com.KanadeM.IOMMS.Entity.ServerControlInfo;
 import java.io.Reader;
 import java.util.List;
-import java.util.Map;
+import com.google.gson.Gson;
+import net.minidev.json.JSONObject;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -66,8 +67,8 @@ public class ServerControlInfoTest {
   public void getMessageList() {
     List<Message> messageList = messageDao.getMessageList(null);
     for(Message message : messageList){
-
-      System.out.println(message.toString());
+      Gson gson = new Gson();
+      System.out.println(gson.toJson(message));
     }
 
   }

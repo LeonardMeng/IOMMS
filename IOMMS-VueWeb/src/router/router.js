@@ -4,6 +4,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import {Login, Error, Controlcabin} from '../views'
+import UploadFile from '../views/uploadfile'
 
 Vue.use(Router)
 
@@ -21,6 +22,12 @@ export const vueRouter = new Router({
       name: '驾驶舱',
       hidden: true,
       component: Controlcabin
+    },
+    {
+      path: '/uploadfile',
+      name: '驾驶舱',
+      hidden: true,
+      component: UploadFile
     },
     {
       path: '/',
